@@ -23,6 +23,15 @@ const playlistRoutes = require('./routes/playlistRoutes');
 app.use('/api/users', userRoutes);
 app.use('/api/playlist', playlistRoutes);
 
+if (process.env.NODE_ENV === 'production') 
+    {
+       //*Set static folder up in production
+       app.use(express.static('client/build'));
+   
+       app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'frontend', 'build','index.html')));
+     }
+
+
 app.get('/', function (req, res) {
     console.log("Hello World!");
     res.send('Hello World!');
