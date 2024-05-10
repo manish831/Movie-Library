@@ -20,27 +20,12 @@ import {
 
 
 const App = () =>{
-    // const [movies, setMovies] = useState([]);
-    // const [toSearch, setToSearch] = useState('');
-    // const getMovie = async () => {
-    //     const url = `https://www.omdbapi.com/?s=${toSearch}&apikey=4a3b711b`;
-    //     const response = await fetch(url);
-    //     const jsonResponse = await response.json();
-    //     if(jsonResponse.Search){
-    //         setMovies(jsonResponse.Search);
-    //     }
-    // };
-    // useEffect(()=>{
-    //     getMovie(toSearch);
-    // }, [toSearch]);
-
     const router = createBrowserRouter([
         {
             path: "/",
             element: (
                 <div>
                     <HomePage />
-                
                 </div>
             )
         },
@@ -69,18 +54,6 @@ const App = () =>{
             )
         }
     ])
-    // return (
-    //     <div className='container-fluid movie'>
-    //         <div className='row d-flex align-item-center mt-4 mb-4'>
-    //             <ListHeading heading = 'Movies' />
-    //             <SearchBox toSearch={toSearch} setToSearch = {setToSearch} />
-    //         </div>
-    //         <div className='row'>
-    //             <ListMovie movies = {movies} />
-    //         </div>
-    //     </div>
-    // );
-
     return (
         <div className='container-fluid movie'>
              <RouterProvider router={router} />

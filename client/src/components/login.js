@@ -82,9 +82,7 @@ const Login = ({ history }) => {
               onChange={handleInputChange}
             />
           </Form.Group>
-
           {error && <p style={{ color: "red" }}>{error}</p>}
-
           <Button variant="primary" type="submit">
             Login
           </Button>
