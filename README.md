@@ -32,6 +32,48 @@ movie-playlist-api/
 
 ```
 
+## End points:
+-  SignUP end-point: `https://movie-library-l7p0.onrender.com/api/users/create` .
+```
+Method: POST
+Body: 
+{
+    "username":"FinalTest",
+    "email":"finaltest@test.com",
+    "password":"finalTest"
+}
+
+Response: 
+{
+    "username": "FinalTest",
+    "password": "$2a$10$zWR5hfhtASV3/J1e7EIdWOZCOJe6R9wlry8Nk4vhd726QV.WrFIPu",
+    "email": "finaltest@test.com",
+    "_id": "663e7664ad6ca6736e620d31",
+    "__v": 0
+}
+```
+![image](https://github.com/manish831/Movie-Library/assets/74316266/15a409ab-0211-48d6-9e5f-691c276b55c8)
+
+
+- Login End-Point: `https://movie-library-l7p0.onrender.com/api/users/login`
+```
+Method: POST
+Body:
+{
+    "username":"FinalTest",
+    "password":"finalTest"
+}
+
+Response:
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjNlNzY2NGFkNmNhNjczNmU2MjBkMzEiLCJ1c2VybmFtZSI6IkZpbmFsVGVzdCIsImlhdCI6MTcxNTM2OTkzOSwiZXhwIjoxNzE1NDA1OTM5fQ.19AgvqMwhe8TneDin2A6QuDnTPwKitHfczG9ENkZVkY",
+    "userId": "663e7664ad6ca6736e620d31"
+}
+```
+![image](https://github.com/manish831/Movie-Library/assets/74316266/23081e0d-9e9d-496a-b4ae-f85c698380f2)
+
+
+
 
 
 
