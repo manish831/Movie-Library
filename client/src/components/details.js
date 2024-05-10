@@ -23,7 +23,12 @@ const MovieInfo = () => {
           'Authorization': token
         }
       });
-
+      // const response = await fetch(`http://localhost:5000/api/playlist/${userId}`, {
+      //   method: 'GET',
+      //   headers: {
+      //     'Authorization': token
+      //   }
+      // });
       if (response.ok) {
         const playlists = await response.json();
         setExistingPlaylists(playlists);
@@ -53,6 +58,14 @@ const MovieInfo = () => {
         },
         body: JSON.stringify(playlistData)
       });
+      // const response = await fetch(`http://localhost:5000/api/playlist/${playlistId}`, {
+      //   method: 'PATCH',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     'Authorization': token
+      //   },
+      //   body: JSON.stringify(playlistData)
+      // });
 
       if (!response.ok) {
         throw new Error('Failed to add movie to playlist');
@@ -98,7 +111,15 @@ const MovieInfo = () => {
         },
         body: JSON.stringify(playlistData)
       });
-
+      // const response = await fetch('http://localhost:5000/api/playlist/create', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     'Authorization': token
+      //   },
+      //   body: JSON.stringify(playlistData)
+      // });
+      
       if (!response.ok) {
         throw new Error('Failed to create playlist');
       }

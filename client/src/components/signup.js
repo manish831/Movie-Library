@@ -27,7 +27,13 @@ const Signup = () => {
         },
         body: JSON.stringify(credentials),
       });
-  
+      // const response = await fetch("http://http://localhost:5000/api/users/create", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(credentials),
+      // });
       const data = await response.json();
       if (response.ok) {
         alert("User has been signed up successfully!");
