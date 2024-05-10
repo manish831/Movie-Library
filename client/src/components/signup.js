@@ -20,7 +20,7 @@ const Signup = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://localhost:5000/api/users/create", {
+      const response = await fetch("https://movie-library-l7p0.onrender.com/api/users/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

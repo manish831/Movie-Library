@@ -17,7 +17,7 @@ const MovieInfo = () => {
       const userId = localStorage.getItem('userId');
       const token = localStorage.getItem('authToken');
       console.log(token);
-      const response = await fetch(`http://localhost:5000/api/playlist/${userId}`, {
+      const response = await fetch(`https://movie-library-l7p0.onrender.com/api/playlist/${userId}`, {
         method: 'GET',
         headers: {
           'Authorization': token
@@ -45,7 +45,7 @@ const MovieInfo = () => {
         movieId: id
       };
 
-      const response = await fetch(`http://localhost:5000/api/playlist/${playlistId}`, {
+      const response = await fetch(`https://movie-library-l7p0.onrender.com/api/playlist/${playlistId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ const MovieInfo = () => {
         public: isPublic
       };
 
-      const response = await fetch('http://localhost:5000/api/playlist/create', {
+      const response = await fetch('https://movie-library-l7p0.onrender.com/api/playlist/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
