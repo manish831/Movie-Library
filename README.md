@@ -72,6 +72,99 @@ Response:
 ```
 ![image](https://github.com/manish831/Movie-Library/assets/74316266/23081e0d-9e9d-496a-b4ae-f85c698380f2)
 
+## Playlist related end-points
+- Create Playlist : `https://movie-library-l7p0.onrender.com/api/playlist/create`
+```
+Method: POST
+Body:
+{
+    "userId": "663e7664ad6ca6736e620d31",
+    "name":"Thriller",
+    "public": true,
+    "movieId":"tty1287"
+},
+Header
+{
+    "Authorization" : "token"
+}
+For example:
+Header
+{
+    "Authorization" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjNlNzY2NGFkNmNhNjczNmU2MjBkMzEiLCJ1c2VybmFtZSI6IkZpbmFsVGVzdCIsImlhdCI6MTcxNTM2OTkzOSwiZXhwIjoxNzE1NDA1OTM5fQ.19AgvqMwhe8TneDin2A6QuDnTPwKitHfczG9ENkZVkY"
+}
+Response:
+{
+    "userId": "663e7664ad6ca6736e620d31",
+    "name": "Thriller",
+    "public": true,
+    "movies": [
+        "tty1287"
+    ],
+    "_id": "663ec3b19311cca047e6140e",
+    "__v": 0
+}
+```
+![image](https://github.com/manish831/Movie-Library/assets/74316266/875b95bb-43df-48bd-b2e5-a25e3e3b0103)
+
+- Get Playlist: `https://movie-library-l7p0.onrender.com/api/playlist/${userId}`
+- For Eg: `https://movie-library-l7p0.onrender.com/api/playlist/663e7664ad6ca6736e620d31`
+```
+Method: GET
+Body:
+{
+
+},
+Header
+{
+    "Authorization" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjNlNzY2NGFkNmNhNjczNmU2MjBkMzEiLCJ1c2VybmFtZSI6IkZpbmFsVGVzdCIsImlhdCI6MTcxNTM2OTkzOSwiZXhwIjoxNzE1NDA1OTM5fQ.19AgvqMwhe8TneDin2A6QuDnTPwKitHfczG9ENkZVkY"
+}
+Response:
+[
+    {
+        "_id": "663ec3b19311cca047e6140e",
+        "userId": "663e7664ad6ca6736e620d31",
+        "name": "Thriller",
+        "public": true,
+        "movies": [
+            "tty1287"
+        ],
+        "__v": 0
+    }
+]
+```
+![image](https://github.com/manish831/Movie-Library/assets/74316266/794b0be4-0029-46e4-a15d-2c501047b94d)
+
+- Update Playlist: `https://movie-library-l7p0.onrender.com/api/playlist/${playlistId}`
+- For eg: `https://movie-library-l7p0.onrender.com/api/playlist/663ec3b19311cca047e6140e`
+
+```
+Method: PATCH
+Body:
+{
+    "movieId": "yt12378"
+},
+Header
+{
+    "Authorization" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjNlNzY2NGFkNmNhNjczNmU2MjBkMzEiLCJ1c2VybmFtZSI6IkZpbmFsVGVzdCIsImlhdCI6MTcxNTM2OTkzOSwiZXhwIjoxNzE1NDA1OTM5fQ.19AgvqMwhe8TneDin2A6QuDnTPwKitHfczG9ENkZVkY"
+}
+Response:
+{
+    "_id": "663ec3b19311cca047e6140e",
+    "userId": "663e7664ad6ca6736e620d31",
+    "name": "Thriller",
+    "public": true,
+    "movies": [
+        "tty1287",
+        "yt12378"
+    ],
+    "__v": 0
+}
+```
+
+![image](https://github.com/manish831/Movie-Library/assets/74316266/fd6f4a5e-6531-45c4-a617-5cd7e7e9cee4)
+
+## Similarly we can define another route related to playlist like, update playList(making playlist either Public or Private), Delete PlayList, etc.
+
 
 
 
