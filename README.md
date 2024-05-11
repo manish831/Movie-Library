@@ -164,6 +164,28 @@ Response:
 ![image](https://github.com/manish831/Movie-Library/assets/74316266/fd6f4a5e-6531-45c4-a617-5cd7e7e9cee4)
 
 ## Similarly we can define another route related to playlist like, update playList(making playlist either Public or Private), Delete PlayList, etc.
+# Frontend- Tech Used: ReactJS
+## I am attaching screenshot of screen i have made.
+- SignUp
+![image](https://github.com/manish831/Movie-Library/assets/74316266/d3448022-9404-443e-960e-ddb6431b1c58)
+- LogIn
+![image](https://github.com/manish831/Movie-Library/assets/74316266/5898fc87-05f0-4be5-9f71-3f8d9ec8b877)
+- Home
+![image](https://github.com/manish831/Movie-Library/assets/74316266/c92c1a20-d5c7-4dda-bd29-e5ffbcbaaded)
+- Screen for searching movie upon entering each character using OMDB API
+a.
+![image](https://github.com/manish831/Movie-Library/assets/74316266/b70dd5db-615c-4984-8fd4-e858f260a4d3)
+b.
+![image](https://github.com/manish831/Movie-Library/assets/74316266/48d30703-d2d1-484b-9376-cd7a961a76ad)
+
+- Description of Movie
+![image](https://github.com/manish831/Movie-Library/assets/74316266/7d6b88bd-142e-420d-a44e-65e3de622abc)
+
+
+
+
+
+
 
 
 
